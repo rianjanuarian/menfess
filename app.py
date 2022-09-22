@@ -3,7 +3,7 @@ import time
 
 
 tw = Twitter()
-#tojss
+#tojssd
 def start():
     print("Starting program...")
     dms = list()
