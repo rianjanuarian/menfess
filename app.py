@@ -26,7 +26,7 @@ def start():
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
                                 tw.post_tweet(message)
-                                recipient_id = id  # ID of the user
+                                recipient_id = 'id'# ID of the user
                                 tw.api.send_direct_message(recipient_id,"Pesan kamu akan segera dikirm :)")
                                 tw.delete_dm(id)
                                 
@@ -34,7 +34,7 @@ def start():
                                 print("DM will be posted with media")
                                 print(dms[i]['shorted_media_url'])
                                 tw.post_tweet_with_media(message, dms[i]['media'],dms[i]['shorted_media_url'], dms[i]['type'])
-                                recipient_id = id  # ID of the user
+                                recipient_id = 'id'# ID of the user
                                 tw.api.send_direct_message(recipient_id,"Pesan kamu akan segera dikirm :)")
                                 tw.delete_dm(id)
                           
@@ -44,7 +44,7 @@ def start():
                            
                     else:
                         print("DM will be deleted because does not contains keyword..")
-                        recipient_id = id  # ID of the user
+                        recipient_id = 'id'# ID of the user
                         tw.api.send_direct_message(id,"Pesan kamu akan segera dikirm :)")
                         tw.delete_dm(id)
                    
