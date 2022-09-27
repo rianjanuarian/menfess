@@ -27,7 +27,7 @@ def start():
                                 print("DM will be posted")
                                 tw.post_tweet(message)
                               
-                                tw.api.send_direct_message(sender_id,"Pesan kamu akan segera dikirim :)")
+                                tw.api.send_direct_message(sender_id,"Pesan kamu sudah terkirim :)")
                                 tw.delete_dm(id)
                                 
                             else:
@@ -35,7 +35,7 @@ def start():
                                 print(dms[i]['shorted_media_url'])
                                 tw.post_tweet_with_media(message, dms[i]['media'],dms[i]['shorted_media_url'], dms[i]['type'])
                             
-                                tw.api.send_direct_message(sender_id,"Pesan kamu akan segera dikirim :)")
+                                tw.api.send_direct_message(sender_id,"Pesan kamu sudah terkirim :)")
                                 tw.delete_dm(id)
                           
                         else:
