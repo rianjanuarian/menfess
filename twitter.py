@@ -77,7 +77,7 @@ class Twitter:
         print("Deleting dm with id = "+ str(id))
         try:
             self.api.destroy_direct_message(id)
-            self.api.send_direct_message(id,"Pesan tidak mengandung trigger, jgn lupa tambahkan trigger yaa :)")
+          
             time.sleep(40)
         except Exception as ex:
             print(ex)
@@ -88,7 +88,7 @@ class Twitter:
     def post_tweet(self, tweet):
         try:
             self.api.update_status(tweet)
-            self.api.send_direct_message(id,"Pesan kamu akan segera dikirim :)")
+        
         except Exception as e:
             print(e)
             pass
@@ -137,7 +137,7 @@ class Twitter:
             os.remove(arr)
             
             print("Upload with media success!")
-            self.api.send_direct_message(id,"Pesan kamu akan segera dikirm :)")
+      
         except Exception as e:
             print(e)
             pass

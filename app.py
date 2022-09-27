@@ -25,17 +25,22 @@ def start():
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
                                 tw.post_tweet(message)
-                               
+                                tw.delete_dm(id)
+                                tw.api.send_direct_message(id,"Pesan kamu akan segera dikirm :)")
                             else:
                                 print("DM will be posted with media")
                                 print(dms[i]['shorted_media_url'])
                                 tw.post_tweet_with_media(message, dms[i]['media'],dms[i]['shorted_media_url'], dms[i]['type'])
-                              
+                                tw.delete_dm(id)
+                                tw.api.send_direct_message(id,"Pesan kamu akan segera dikirm :)")
                         else:
                             print("DM deleted because its empty..")
+                            tw.delete_dm(id)
                            
                     else:
                         print("DM will be deleted because does not contains keyword..")
+                        tw.delete_dm(id)
+                        tw.api.send_direct_message(id,"Pesan tidak mengandung keyword/trigger :(")
                         
 
             dms = list()
