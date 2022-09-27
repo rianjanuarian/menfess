@@ -45,7 +45,7 @@ def start():
                     else:
                         print("DM will be deleted because does not contains keyword..")
                         
-                        tw.api.send_direct_message(sender_id,"Pesan kamu tidak mengandung keyword/trigger :(")
+                        # tw.api.send_direct_message(sender_id,"Pesan kamu tidak mengandung keyword/trigger :(")
                         tw.delete_dm(id)
                    
                         
